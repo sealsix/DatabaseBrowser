@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="1" author="Mensik" failOnError="true">
+
+        <comment>create table to store DATASOURCE_CONFIG information
+                  jdbc:h2:tcp://localhost:9090/mem:testdb</comment>
+
+        <createTable tableName="DATASOURCE_CONFIG" schemaName="public">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="VENDOR" type="varchar(100)"/>
+            <column name="DBNAME" type="varchar(100)"/>
+            <column name="HOSTNAME" type="varchar(100)"/>
+            <column name="PORT" type="int"/>
+            <column name="USERNAME" type="varchar(100)"/>
+            <column name="PASSWORD" type="varchar(100)"/>
+            <column name="VERSION" type="bigint"/>
+            <column name="CREATED_AT" type="datetime" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="UPDATED_AT" type="datetime" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+
+    </changeSet>
+
+
+    <changeSet author="Mensik" id="2">
+
+        <comment>insert samle data for dev</comment>
+
+        <insert tableName="DATASOURCE_CONFIG">
+            <column name="id" value="1"/>
+            <column name="VENDOR" value="H2"/>
+            <column name="DBNAME" value="TESTDB"/>
+            <column name="HOSTNAME" value="localhost"/>
+            <column name="PORT" value="8080"/>
+            <column name="USERNAME" value="dbb"/>
+            <column name="PASSWORD" value="dbb"/>
+            <column name="VERSION" value="1"/>
+        </insert>
+        <insert tableName="DATASOURCE_CONFIG">
+            <column name="id" value="2"/>
+            <column name="VENDOR" value="H2"/>
+            <column name="DBNAME" value="mem:testdb"/>
+            <column name="HOSTNAME" value="tcp://localhost"/>
+            <column name="PORT" value="9090"/>
+            <column name="USERNAME" value="dbb"/>
+            <column name="PASSWORD" value="dbb"/>
+            <column name="VERSION" value="1"/>
+        </insert>
+        <insert tableName="DATASOURCE_CONFIG">
+            <column name="id" value="3"/>
+            <column name="VENDOR" value="H2"/>
+            <column name="DBNAME" value="Test"/>
+            <column name="HOSTNAME" value="tcp://localhost"/>
+            <column name="PORT" value="111"/>
+            <column name="USERNAME" value="dbb"/>
+            <column name="PASSWORD" value="dbb"/>
+            <column name="VERSION" value="1"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
