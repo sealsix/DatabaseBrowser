@@ -10,7 +10,7 @@ a pres liquibase se vytvori tabulky a naplni sample daty:
 ```
 java -jar  -Dspring.profiles.active=dev  DatabaseBrowser.jar
 ```
-* pripadne druhou instanci je mozne pustit bez dev profilu s nastavenim, kde je pustena databaze:
+* pripadne druhou instanci je mozne pustit bez dev profilu s nastavenim pripojeni k databazi
 
 ```
 java -jar DatabaseBrowser.jar --spring.datasource.url=jdbc:h2:tcp://localhost:9090/mem:testdb 
