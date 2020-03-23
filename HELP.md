@@ -35,6 +35,7 @@ multinodoveho prostredi
 - dokumentace api pres Swagger
 - projit pom a pro jistotu zbuildene jar na zbytecnosti
 - pridat releasovani napr pres maven release plugin
+- smazani maven wrapperu
 - bonusove ulohy :)
 
 
