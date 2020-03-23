@@ -1,5 +1,5 @@
 
-#### Database browser slouzi pro CRUD spravu connection settings k nejake databazi a nacitani dat z ni.
+#### Database browser slouzi pro CRUD spravu connection settings k databazim. Dale je moznost se pripojit k dane databazi a nacist informace o ni jako schemata, sloupce, tabulky, data.
 
 Momentalne podporuje pouze databazi H2, podporovane databaze jsou dostupne v rest resource /supportedTypes.
 
