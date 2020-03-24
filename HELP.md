@@ -33,7 +33,7 @@ multinodoveho prostredi
 - DatasourceInfoRestController pri nevalidnim datasource config vratit lepsi hlasku
 - u resource /{id}/tables/{tableName}/preview pridat parametr schema aby bylo mozne nacitat tabulku z jakehokoliv schematu
 - dokumentace api pres Swagger
-- projit pom a pro jistotu zbuildene jar na zbytecnosti
+- projit pom a pro jistotu zbuildene jar na zbytecnosti a zmensit velikost jar. 82 MB je moc :)
 - pridat releasovani napr pres maven release plugin
 - smazani maven wrapperu
 - bonusove ulohy :)
