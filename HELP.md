@@ -20,13 +20,13 @@ java -jar DatabaseBrowser.jar --spring.datasource.url=jdbc:h2:tcp://localhost:9
 #### dulezite:
 #### TODO list:
 TODO: 
-- opravit nefungujici pusteni spring boot testu pri maven package
--zvetsit mnozstvi testu
-- integracni testy - zkusit najit zpusob, jak kontrolovat, ze vytvorene runtime datasoursy se po volani metod 
+- opravit nefungujici pusteni spring boot testu pres maven
+- zvetsit mnozstvi testu
+- integracni testy - zkusit najit zpusob, jak kontrolovat, ze vytvorene runtime datasourcy se po volani metod 
 korektne zaviraji
 - pridat zakladni jednotkove testy
 - pridani pagination tak aby rest kontrolery strankovaly - napr u nahledu dat muze byt velke mnozstvi vracenych dat
-- zvazit cachovani vytvorenych datasourcu, pripadne celych runtime servis - bylo by ale nutne zajistit ze pri konci behu aplikace, nebo pri cache evict
+- zvazit cachovani vytvorenych runtime datasourcu, pripadne celych runtime servis - bylo by ale nutne zajistit ze pri konci behu aplikace, nebo pri cache evict
 budou cachovane datasoursy korektne ukoncovany. Byla by potreba synchronizacni cache v pripade
 multinodoveho prostredi
 - vracet TO ze servis do prezentacni vrstvy a zrusit zavislosti na domenove entity v prezentacni vrstve
