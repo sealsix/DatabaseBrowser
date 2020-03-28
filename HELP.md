@@ -38,6 +38,9 @@ multinodoveho prostredi
 - smazani maven wrapperu
 - bonusove ulohy :)
 
+### TODO UPDATE 28.3.
+databazovy index nad id 
+misto beanutils pouzit nejaky nereflexivni framework jako mapstruct aby to bylo rychle
 
 
 
